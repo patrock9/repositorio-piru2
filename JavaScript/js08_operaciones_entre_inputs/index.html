@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 08</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        <h2 style="text-align: center">Introducir un valor en los cuadros de texto y luego pulsar el boton para ejecutar la funcion correspondiente</h2>
+        
+        <p style="background-color:rgb(0, 238, 255) ;"><label for="">Entrada 1:</label><input id="1ro"></p>
+        <p style="background-color:rgb(0, 238, 255) ;"><label for="">Entrada 2:</label><input id="2do"></p>
+        <p style="background-color:rgb(0, 238, 255) ;"><label for="">Entrada 3:</label><input id="3ro"></p>
+        <p style="background-color:rgb(0, 238, 255) ;"><label for="">resultado: </label><input id="resul"></p>
+
+        <button id="suma">Sumar</button>
+        <button id="prom">Promediar</button>
+        <button id="+grande">Mayor</button>
+
+        <script>
+
+            document.getElementById("suma").onclick = function(){ /*sumar */
+                document.getElementById('resul').value = parseInt(document.getElementById('1ro').value) + parseInt(document.getElementById('2do').value) + parseInt(document.getElementById('3ro').value);
+            }
+
+            document.getElementById("prom").onclick = function(){ /*promediar */
+                var resultado;
+                resultado = parseFloat(document.getElementById('1ro').value) + parseFloat(document.getElementById('2do').value) + parseFloat(document.getElementById('3ro').value) ;
+                document.getElementById('resul').value = parseFloat(resultado) / parseFloat(3);
+            }
+
+            document.getElementById("+grande").onclick = function(){ /*mayor num */
+
+                if(parseInt(document.getElementById('3ro').value) > parseInt(document.getElementById('2do').value) && parseInt(document.getElementById('1ro').value))
+                {
+                    return document.getElementById('resul').value = document.getElementById('3ro').value;
+                }
+
+                if(parseInt(document.getElementById('1ro').value) > parseInt(document.getElementById('2do').value) && parseInt(document.getElementById('3ro').value))
+                {
+                    return document.getElementById('resul').value = document.getElementById('1ro').value;
+                }
+
+                if(parseInt(document.getElementById('2do').value) > parseInt(document.getElementById('1ro').value) && parseInt(document.getElementById('3ro').value))
+                {
+                    return document.getElementById('resul').value = document.getElementById('2do').value;
+                } 
+            }
+
+        </script>
+
+    </body>
+</html>

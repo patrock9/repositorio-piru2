@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 12</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body style="background-color:rgb(51, 68, 68) ;"> 
+        <header><h1 style="text-align: center;">Ejercicio 12</h1></header>
+
+        <div style="background-color:aqua; height: 30%;"> <!-- div de creacion -->
+            <H1>Adicionar una persona</H1>
+
+            <p><label for="">Nombre:</label></p> 
+            <p><input id="nombre" type="text" required = "required"></p>
+
+            <p><label for="">Apellido:</label></p> 
+            <p><input id="apellido" type="text" required = "required"></p>
+
+            <p><label for="">Fecha de Nacimiento</label></p>
+            <p><input id="nac" type="datetime"></p>
+
+            <p><button id="crear">Crear persona</button></p>
+        </div>
+
+        <div style="background-color:rgba(247, 153, 39, 0.681) ;"> <!-- div de controles -->
+            <h1>Control</h1>
+
+            <button id="mostrar">Lista personas</button>
+
+            <button id="ocultar">Ocultar presentacion</button>
+        </div>
+
+        <div id="presentacion" style="display:none; background-color: blueviolet;"> <!-- div de la tabla -->
+            hola
+        </div>
+
+
+        <script> /*inicio de las funciones*/
+            var objetopersona = {}; /*creacion de la variable para usar*/
+
+            var objetoPersona = {nombre:"Gherman",apellido:"Galdi",fechaNac:"01/07/1956"} ;
+            var arregloPersonas = [objetoPersona];
+            arregloPersonas.push({nombre:"Maria",apellido:"Witt",fechaNac:"17/01/1985"});
+
+            var objetoPersonas = {peronas: arregloPersonas}; /*para el for each*/
+
+            document.getElementById("crear").onclick = function(){ /*funcion para pushear al array*/
+                var flag = 0;
+
+                if (document.getElementById("nombre").checkValidity()==true){
+                    flag = flag  + 1;
+                }
+                if (document.getElementById("apellido").checkValidity()==true){
+                    flag = flag  + 1;
+                }
+                if (document.getElementById("nac").value != ""){
+                    flag = flag  + 1;
+                }
+
+                if(flag == 3){
+                    var nom = document.getElementById("nombre").value;
+                    var ape = document.getElementById("apellido").value;
+                    var fnac = document.getElementById("nac").value;
+
+                    objetoPersona = {nombre: nom, apellido: ape, fechaNac: fnac};
+                    arregloPersonas.push[objetoPersona];
+
+                    document.getElementById("nombre").value = "";
+                    document.getElementById("apellido").value = "";
+                    document.getElementById("nac").value = "";
+                }
+                else{
+                    alert('FALTO INGRESAR ALGUN CAMPO');
+                    document.getElementById("nombre").value = "";
+                    document.getElementById("apellido").value = "";
+                    document.getElementById("nac").value = "";
+                }
+            }
+
+            document.getElementById("ocultar").onclick = function(){ /*FUNCION PARA OCULTAR TABLA*/
+                    document.getElementById("presentacion").style.display = "none"; 
+            }
+
+            document.getElementById("mostrar").onclick = function(){
+
+                document.getElementById("presentacion").style.display = "block"; 
+                
+                var texto = "<h1>Presentacion</h1>";
+                texto = texto + + "<table style = 'border-collapse:collapse;border:solid'>";
+
+                objetoPersonas.personas.forEach(function(item, indice){
+                    
+                    texto = texto + "<tr><td style='width:50px;height:30px;border-collapse:collapse;border:solid'>"+item.nombre+"</td></tr>";
+                });
+                texto = texto + "</table>";
+                texto = texto + "<h4> Longitud del arreglo de objetos: " + arregloPersonas.length;
+                document.getElementById("presentacion").innerHTML = texto;
+ 
+            }
+
+
+
+        </script>
+
+
+    </body>
+
+</html>
+
+<!--var texto ="<h1> Presentacion </h1>";
+                    texto = texto + "<table style = 'border-collapse:collapse;border:solid'>";
+
+                        texto = texto + "<h4> Longitud del arreglo de objetos: " + arregloPersonas.length;
+                    document.getElementById('presentacion').innerHTML = texto;-->

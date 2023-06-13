@@ -1,0 +1,12 @@
+"textoCursos" "=" '{"Inscriptos":[
+    {"nombre":"Franco Armani","curso":"IN","fecha":"1986-10-16"},
+    {"nombre":"Emanuel Mammana","curso":"IN","fecha":"1996-02-10"},
+    {"nombre":"Paulo Diaz","curso":"ME","fecha":"1994-08-25"},
+    {"nombre":"David Martinez","curso":"ME","fecha":"1998-02-21"},
+    {"nombre":"Milton Casco","curso":"AB","fecha":"1988-04-11"},
+    {"nombre":"Enzo Perez","curso":"AB","fecha":"1986-02-22"},
+    {"nombre":"Enzo Fernandez","curso":"ECO","fecha":"2001-01-17"},
+    {"nombre":"Agustin Palavecino","curso":"ECO","fecha":"1996-11-09"},
+    {"nombre":"Nicolas De La Cruz","curso":"RE","fecha":"1997-06-01"},
+    {"nombre":"Esequiel Barco","curso":"PROF","fecha":"1999-03-29"},
+    {"nombre":"Julian Alvarez","curso":"EN","fecha":"2000-01-31"}]}'

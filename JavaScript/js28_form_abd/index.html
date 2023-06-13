@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 28</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        <div style="background-color:rgb(157, 255, 157); width: 800px; height: 320px; position: absolute; left: 50%; top: 50%; transform: translateY(-50%) translateX(-50%);"> <!-- div principal-->
+
+            <div style="background-color:rgb(76, 182, 248); width: 35%;"> <!-- div interno -->
+                <h2>FORMULARIO ABM</h2>
+
+                <form action="../js21_form_confirmacion/respuestaFormulario/" target="_blank" method="get" id="formulario">
+                    <p><label>Apellido:</label></p>
+                    <p><input type="text" id="apellido" required = "required"></p>
+
+                    <p><label>Nombre:</label></p>
+                    <p><input type="text" id="nombre" required = "required"></p>
+
+                    <p><label>Saldo:</label></p>
+                    <p><input type="number" id="saldo" required = "required"></p>
+                </form>
+            </div>
+
+            <button id="limpiar" disabled = "true">Blanquear</button>
+            <button id="alta" disabled = "true">Alta</button>
+            <button id="modi" disabled = "true">Modi</button>
+            <button id="baja" disabled = "true">Baja</button>
+        </div>
+    </body>
+
+
+    <script>
+        
+        document.getElementById("limpiar").onclick = function(){
+            document.getElementById("formulario").reset();
+            document.getElementById("limpiar").disabled = true;
+        }
+
+        document.getElementById("formulario").onkeyup = function(){
+            document.getElementById("limpiar").disabled = false;
+
+            if(document.getElementById("formulario").checkValidity()){
+                document.getElementById("alta").disabled = false;
+                document.getElementById("modi").disabled = false;
+                document.getElementById("baja").disabled = false;
+            }
+        }
+        
+    </script>
+
+</html>

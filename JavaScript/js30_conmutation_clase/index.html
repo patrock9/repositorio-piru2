@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 30</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+
+
+    <body>
+        <h1>Ejemplo de cambios de estilo dinamicamente</h1>
+
+        <div id="lista" class = "">
+            <h2>Lista con estilo</h2>
+            <ul>
+                <li>
+                    Text1
+                </li>
+                <li>
+                    Text2
+                </li>
+                <li>
+                    Text3
+                </li>
+            </ul>
+        </div>
+        </br>
+        <button id="T1">Tipo 1</button>
+        <button id="T2">Tipo 2</button>
+        <button id="T3">Tipo 3</button>
+        <button id="T4">Tipo 4</button>
+    </body>
+
+    <script>
+
+        document.getElementById("T1").onclick = function(){
+            document.getElementById("lista").className = "clase1"
+        }
+        document.getElementById("T2").onclick = function(){
+            document.getElementById("lista").className = "clase2"
+        }
+        document.getElementById("T3").onclick = function(){
+            document.getElementById("lista").className = "clase3"
+        }
+        document.getElementById("T4").onclick = function(){
+            document.getElementById("lista").className = "clase4"
+        }
+
+    </script>
+
+
+
+</html>

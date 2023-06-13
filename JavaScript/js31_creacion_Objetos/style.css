@@ -1,0 +1,14 @@
+div.div1{
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 60%;
+    height: 50%;
+
+    /*margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}

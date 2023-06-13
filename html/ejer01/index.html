@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang='es'>
+
+    <head>
+        <title>ejercicio 1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    
+
+    <body>
+            <head>
+                <h1>Primer parrafo corto (incluye el retorno de carro)</h1>
+                <h2>Segundo parrafo corto (incluye retorno de carro)</h2>  
+                <h3>Grupo de elementos de navegacion</h3>
+            </head>
+
+            <nav>
+                <ul>
+                    <li><a href="https://www.yahoo.com" title="Todavia usas yahoo?">Yahoo</a></li>
+                    <li><a href="https://www.google.com.ar/" title="El mejor navegador del mundo ;)">Google</a></li>
+                    <li><a href="https://www.youtube.com/" title="Estas aburrido? pasate un rato por este sitio">YouTube</a></li>
+                </ul>
+                <br/>
+                <br/>
+                <hr>
+                    <a href="./ej1OtrapaginaMismaVentana/">Otra pagina misma pestaña</a>
+                    <a href="./ej1OtrapaginaDistintaVentana/ " target="_blank">Otra pagina distinta pestaña</a>
+                    <a href="#AnclaVideo">Ancla a otro punto de esta página</a>
+                <hr>
+            </nav>
+
+            <h3>Preguntas HTML</h3>
+
+            <ol>
+                <li>
+                    Dar un par de ejemplos de uso de etiquetas meta.<br/>
+                        La etiqueta meta se puede usar para dar metadata al navegador, como por ejemplo:
+                        <ol>
+                            <li>name="author" indicando el autor de la pagina HTML.</li>
+                            <li>charset="xxx" indicando la codificación de caracteres del documento.</li>
+                            <li>name="keywords" para definir palabras clave para los navegadores de busqueda.</li>
+                            <li>name"description" define una description para la página web.</li>
+                        </ol>
+                </li>
+
+                <br />
+                <li>
+                    Nombrar al menos 2 atributos aplicables a la etiqueta HTML<br/>
+                    A la etiqueta <html> se le pueden aplicar atributos como lang para indicar el lenguaje del documento, atributo style o tambien atributo class para luego referenciarlo a auna clase en una hoja de estilos.
+                </li>
+
+                <br />
+                <li>Como se relaciona un header http con la etiqueta head de HTML?<br/>
+                        En un header http se envia información (metadatos) relativa a la codificación del mensaje TCP entre el cliente y el servidor como por ejemplo, 
+                        la versión del navegador, el nombre del hots, los lenguajes que acepta el cliente, la versión del servidor, la política de manejo de cache o las codificaciones.<br/>
+                        En la etiqueta &lt;head&gt; del documento HTML se describen metadatos propios del documento como el titulo, enlaces a scripts y hojas de estilo. 
+                        En este se pueden declarar etiquetas &lt;meta&gt; que en caso de que el servidor web no haya informado al navegador cierta información de un header HTTP la proporciona en reemplazo.
+
+                    </li>
+                    <br/>
+                    <li>Que es UTF8?<br/>
+                        UTF8 es un formato de codificación de caracteres, de los mas usados de la web.<br/>
+                        Es de longitud variable con un máximo de 4 bytes, lo cual permite 65.535 posiciones de caracteres.
+                        Sus siglas vienen de 8-bit Unicode Transformation Format.
+                    </li>
+                    <br/>
+                    <li>Que atributo HTML sirve para aplicar estilo, a que etiqueta es aplicable?<br/>
+                        Para aplicar estilo se utiliza el atributo style="xxxx" y dado que es un atributo global se puede aplicar a cualquier etiqueta, aunque 
+                        claramente cobrará mas relevancia en algunas mas que en otras.
+                    </li>
+                    <br/>
+                    <li>Donde se indica que un enlace debe ubicar el documento en una nueva pestaña?<br/>
+                        En la etiqueta &lt;a&gt; mediante el atributo target="_blank" se le indica al navegador que el hipervinculo debe abrirse en una nueva pestaña.
+                    </li>
+                    <br/>
+                    <li> 
+                        Explicar cuando usarían etiquetas semánticas y con que propósito.<br/>
+                        Las etiquetas semanticas se utilizan para dar estructura al documento HTML (header, nav, section, article, aside, footer) 
+                        y permiten a los motores de busqueda indexar mejor la página web.
+                    </li>
+                    <br/>
+                    <li>¿Que atributos de estilo básicos aplicarían a una tabla? Explicar.<br/>
+                        Aplicaría atributos como border-color para cambiar el color de los bordes, background-color para cambiar el color de fondo de la celda o text-align para cambiar la alineación del texto que contiene la tabla.
+                    </li>
+                    <br/>
+                    <li>¿Que diferencia existe entre la etiqueta body de un documento HTML y el body del protocolo HTTP?<br/>
+                        La etiqueta body en un documento HTML indica al navegador que dentro de ella se encuentra el contenido a mostrarse en pantalla al usuario.<br/>
+                        El body de un mensaje HTTP poco tiene que ver con lo antes descripto, en esta parte del mensaje HTTP es donde viajas los datos, cualquiera sea el formato, 
+                        entre cliente y servidor, puede ser datos ingresados en un campo de formulario, archivos enviados mediante un proceso de carga al servidor, 
+                        la página HTML que devuelve el servidor o texto explicativo de algún estado de error..
+
+                    </li>
+                    <br/>
+                    <li>¿Que atributos marcan la agrupación de celdas de una tabla?. ¿A que etiquetas se aplican?<br/>
+                        El atributo colspan y rowspan para columnas y filas respectivamente, son los que se encargan de agrupas celdas en una tabla y siempre se aplican a una etiqueta 
+                        &lt;td&gt; (fila).
+                    </li>
+                        
+                    <br/>
+            </ol>
+            <br />
+            <br />
+            <h3>Sección de imagenes</h3>
+            <br />
+            <br />
+            <p>La siguiente imagen esta insertada en un tamaño natural</p>
+            <br/>
+            <img src="./multi/jefesbb.jpg">
+            <br/>
+            <p>Las imagenes de debajo con diferente anchura</p>
+            <img src="./multi/jefesbb.jpg" width="205" height="546"></img> 
+            <img src="./multi/jefesbb.jpg" width="410" height="546"></img> 
+
+
+            <h3>Seccion de video</h3>
+            <video src="./multi/bossfight.mp4" width="640" height="360" controls></video>
+            <br />
+            <br />
+
+            <h3>Anclajes</h3>
+            <a id="AnclaVideo">Punto de anclaje</a>
+
+            <br />
+            <br />
+            <br />
+            <footer>
+                <h1>Datos del alumno</h1>
+                <p>Patricio Emanuel Frascaroli Goria</p>
+                <p>Legajo 15-26817</p>
+                <a href="mailto:pfrascaroli817@alumnos.frh.utn.edu.ar">pfrascaroli817@alumnos.frh.utn.edu.ar</a>
+            </footer>
+
+    </body>
+</html>

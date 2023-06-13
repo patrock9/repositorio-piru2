@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 24</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        <h2>Ejer validacion de un INPUT</h2>
+
+        <div style="background-color:aquamarine; width: 50%; height: 15%; display: flex; justify-content: left; align-items: center; margin: auto;">
+            
+            <form action="../js21_form_confirmacion/respuestaFormulario/" target="_blank" method="get" id="formulario">
+
+                <p><label>Ingrese el numero del dia del mes:</label></p>
+                <p><input type="number" id="dia" required = "required"></p>
+
+                <p><label>Ingrese el numero del mes</label></p>
+                <p><input type="number" id="mes" required = "required"></p>
+
+                </br></br></br>
+                <button id="envio">Enviar</button> <button id="resetear">Reset</button>
+            </form>
+        </div>
+
+    </body>
+
+    <script>
+
+        document.getElementById("dia").onkeyup = function(){
+
+            if(document.getElementById("dia").value > 31 || document.getElementById("dia").value < 0){
+
+                alert("ingreso un valor invalido");
+            }
+        }
+        document.getElementById("mes").onkeyup = function(){
+
+            if(document.getElementById("mes").value > 12 || document.getElementById("dia").value < 0){
+
+                alert("ingreso un valor invalido");
+            }
+        }
+
+        document.getElementById("resetear").onclick = function(){
+
+          document.getElementById("formulario").reset();
+        }
+
+        document.getElementById("envio").onclick = function(){
+
+            if(objInput.checkValidity()){
+                
+                document.getElementById("formulario").submit();
+                document.getElementById("formulario").reset();
+            }
+            else{
+                alert("No ingreso algun valor o lo ingreso mal.");
+            }
+        }
+    
+
+    </script>
+
+
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 10</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        
+        <div style="float: left; height: 100%; width: 50%;
+        display: block; overflow: overlay; padding: 20px; background-color:rgb(31, 216, 233);">
+            <p>
+                <label for="">Ingrese nombre:</label>
+            </p>
+            <p>
+                <input id="name">
+            </p>
+            <p>
+                <label for="">Ingrese el apellido:</label>
+            </p>
+            <P>
+                <input id="apellido">
+            </p>
+        </div>
+
+        <script>
+            document.getElementById("name").onchange = function(){ /*nombre*/
+                document.getElementById("name").value = document.getElementById("name").value.toUpperCase();
+            }
+            document.getElementById("apellido").onchange = function(){ /*apellido*/
+                document.getElementById("apellido").value = document.getElementById("apellido").value.toUpperCase();
+            }
+
+
+        </script>
+
+
+    </body>
+
+
+</html>

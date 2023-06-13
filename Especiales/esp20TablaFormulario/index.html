@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			Esp10TablaVariableArregloDeObjetos
+		</title>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<div id="cont">
+			<div class="encabezado-pie">
+				<h2>Jugadores</h2>
+				<button id="cargar">Cargar datos</button>
+				<button id="vaciar">Vaciar datos</button>
+				<button id="abrir">Abrir formulario</button>
+			</div>
+			<div class="th">
+				<div class="columna">Nombre</div>
+				<div class="columna">Carrera</div>
+				<div class="columna">Fecha de nacimiento</div>
+			</div>
+			<div class="clear"></div>
+			<div class="contenedor">
+				<table>
+					<tbody id=tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="encabezado-pie">
+				<h3>Pie de página</h3>
+			</div>
+		</div>
+		<div id="modal">
+			<div class="encabezadoModal">
+				Encabezado modal
+				<button class="cerrar" id="cerrar">X</button>
+			</div>
+			<iframe src="../esp05FormVariableArregloDeObejetos/"></iframe>
+		</div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../alumnos.json" type="text/javascript"></script>
+
+
+	<script type="text/javascript">
+		var inscriptos= JSON.parse(textoCursos);
+		var fila;
+		var celda;
+		var cont=document.getElementById("contenedor");
+		var body=document.getElementById("tbody");
+		var flagCargado=0;
+        
+		$(document).ready(function(){
+			document.getElementById("modal").className="modalApagado";
+			document.getElementById("cont").className="contenedorAct";
+		});
+		document.getElementById("abrir").onclick=function(){
+			document.getElementById("modal").className="modalPrendido";
+			document.getElementById("cont").className="contenedorBloq";
+		}
+		document.getElementById("cerrar").onclick=function(){
+			document.getElementById("modal").className="modalApagado";
+			document.getElementById("cont").className="contenedorAct";
+		}
+		document.getElementById("cargar").onclick = function() {
+		    if(flagCargado == 0) {
+		        inscriptos.Inscriptos.forEach(element => {
+		        
+		            fila = document.createElement("tr");
+
+		            celda = document.createElement("td");
+		            celda.setAttribute("campo-dato", "nombre")
+		            celda.innerHTML = element.nombre;
+		            // Agrega celda a nueva fila
+		            fila.appendChild(celda)
+		            
+		            celda = document.createElement("td");
+		            celda.setAttribute("campo-dato", "curso")
+		            celda.innerHTML = element.curso;
+		            // Agrega celda a nueva fila
+		            fila.appendChild(celda)
+		            
+		            celda = document.createElement("td");
+		            celda.setAttribute("campo-dato", "fecha")
+		            celda.innerHTML = element.fecha;
+		            // Agrega celda a nueva fila
+		            fila.appendChild(celda)
+		            
+		            body.appendChild(fila);
+		        });
+		        flagCargado++;
+		    }
+		}
+		document.getElementById("vaciar").onclick=function(){
+			$("#tbody").empty();
+			flagCargado=0;
+		}
+	</script>
+</html>

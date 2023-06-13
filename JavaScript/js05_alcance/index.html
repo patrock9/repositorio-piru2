@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+
+    <head>
+        <title>JS ejercicio 05</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+
+    <body>
+        
+        <button id="mal" title="Inicializa variable global desde adentro de una funcion con la declación de la variable">Inicializacion incorrecta</button>
+        <button id="bien" title="Inicializa variable global desde adentro de una funcion sin declarar la variable ">Inicializacion correcta</button>
+        <button id="mostrar" title="Muestra la variable global y su tipo">Muestra variable local</button>
+
+        <script>
+            var varglobal;
+            
+            document.getElementById("mal").onclick = function() {
+                var varglobal = prompt("Por favor, ingrese el valor a asignar de forma local");
+                alert('El valor de variableGlobal es: '+varglobal);
+                alert('El tipo de variableGlobal es: '+ typeof varglobal);
+            }
+
+            document.getElementById("bien").onclick = function() {
+                varglobal = prompt("Por favor, ingrese el valor a asignar de forma local");
+                alert('El valor de variableGlobal es: '+varglobal);
+                alert('El tipo de variableGlobal es: '+ typeof varglobal);
+            }
+
+            document.getElementById("mostrar").onclick = function() {
+                if (varglobal==undefined)
+                    {
+                        alert("La variableGlobal no ha sido inicializada")
+                    }
+                else
+                    {
+                        alert('El valor de variableGlobal es: '+varglobal);
+                        alert('El tipo de variableGlobal es: '+ typeof varglobal);
+                    }
+            }
+            
+        </script>
+
+        
+    </body>
+
+</html>
+
+

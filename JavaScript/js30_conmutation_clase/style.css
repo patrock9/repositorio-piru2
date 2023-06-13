@@ -1,0 +1,25 @@
+div.clase1{
+    background-color: aqua;
+    font-style: italic;
+    width: 20%;
+}
+
+div.clase2{
+    background-color: blueviolet;
+    font-style:normal;
+    font-size: 1ch;
+    width: 20%;
+}
+
+div.clase3{
+    background-color: rgb(253, 158, 34);
+    font-style: oblique;
+    font-size:3ch;
+    width: 20%;
+}
+
+div.clase4{
+    background-color:rgb(135, 124, 0) ;
+    font-style: initial;
+    width: 20%;
+}
